@@ -2,1192 +2,924 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top 100 AI Tools</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<title>Top 100 AI Tools</title>
+<style>
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-      margin: 0;
-      padding: 2rem;
+        background-color: #0e0e0e;
+        color: #e0e0e0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
     }
     h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #00ffc3;
+        color: #00f0ff;
+        text-align: center;
     }
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    #filter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
     }
-    .tool-card {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 16px;
-      padding: 1.5rem;
-      transition: transform 0.3s ease;
+    select {
+        padding: 10px;
+        background-color: #222;
+        color: #fff;
+        border: 1px solid #444;
+        border-radius: 5px;
     }
-    .tool-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px #00ffc3;
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
     }
-    .tool-logo {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
+    .card {
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        padding: 15px;
+        width: 250px;
+        box-shadow: 0 0 10px #00f0ff55;
+        transition: transform 0.3s;
     }
-    .tool-title {
-      font-size: 1.25rem;
-      margin: 0.5rem 0;
-      color: #00ffc3;
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #00f0ff;
     }
-    .tool-category {
-      font-size: 0.9rem;
-      color: #999;
+    .card img {
+        max-width: 40px;
+        height: auto;
     }
-    .tool-description {
-      margin: 0.5rem 0;
-      font-size: 1rem;
+    .title {
+        font-size: 18px;
+        color: #00f0ff;
+        margin: 10px 0 5px;
     }
-    .tool-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1rem;
+    .desc, .price {
+        font-size: 14px;
+        color: #ccc;
     }
-    .price-tag {
-      background-color: #00ffc3;
-      color: #000;
-      padding: 0.3rem 0.6rem;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 0.9rem;
+    .button {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 5px 10px;
+        color: #0e0e0e;
+        background-color: #00f0ff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
     }
-    .visit-button {
-      background-color: transparent;
-      border: 1px solid #00ffc3;
-      color: #00ffc3;
-      padding: 0.4rem 0.8rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .visit-button:hover {
-      background-color: #00ffc3;
-      color: #000;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <h1>Top 100 AI Tools</h1>
-  <div class="tools-grid">
-    
-    <div class="tool-card">
-      <img src="https://yandex.com/favicon.ico" alt="Yandex Translate logo" class="tool-logo" />
-      <div class="tool-title">Yandex Translate</div>
-      <div class="tool-category">AI writing assistant that expands on Grammarly for content generation. </div>
-      <div class="tool-description">Translation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://translate.yandex.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Translator logo" class="tool-logo" />
-      <div class="tool-title">Microsoft Translator</div>
-      <div class="tool-category">Russian based translator with decent accuracy.</div>
-      <div class="tool-description">Translation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://translator.microsoft.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/deepl.com" alt="DeepL logo" class="tool-logo" />
-      <div class="tool-title">DeepL</div>
-      <div class="tool-category">Microsoft’s tool for real time translation.</div>
-      <div class="tool-description">Translation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://www.deepl.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/github.com" alt="GitHub Copilot logo" class="tool-logo" />
-      <div class="tool-title">GitHub Copilot</div>
-      <div class="tool-category">AI code suggestions; integrates with AWS. </div>
-      <div class="tool-description">Coding Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Subscription ($10/mo)</span>
-        <a href="https://github.com/features/copilot" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://www.nvidia.com/favicon.ico" alt="NVIDIA Broadcast logo" class="tool-logo" />
-      <div class="tool-title">NVIDIA Broadcast</div>
-      <div class="tool-category">Audio/Video Enhancement</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://www.nvidia.com/en-us/geforce/broadcasting/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/zapier.com" alt="Zapier logo" class="tool-logo" />
-      <div class="tool-title">Zapier</div>
-      <div class="tool-category">Automates tasks across Microsoft tools. </div>
-      <div class="tool-description">Automation (No-code)</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium plans</span>
-        <a href="https://zapier.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/lalalai.com" alt="Lalal.ai logo" class="tool-logo" />
-      <div class="tool-title">Lalal.ai</div>
-      <div class="tool-category">Voice assistant with smart home and query features. </div>
-      <div class="tool-description">Audio Processing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pay-per-use</span>
-        <a href="https://www.lalal.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://inflection.ai/favicon.ico" alt="Inflection AI Pi logo" class="tool-logo" />
-      <div class="tool-title">Inflection AI Pi</div>
-      <div class="tool-category">Personal AI Assistant</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://inflection.ai/pi" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://www.tensorflow.org/favicon.ico" alt="TensorFlow logo" class="tool-logo" />
-      <div class="tool-title">TensorFlow</div>
-      <div class="tool-category">Machine Learning Framework</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://www.tensorflow.org/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
+<h1>Top 100 AI Tools</h1>
+<div id="filter">
+    <select id="categorySelect" onchange="filterCards()">
+        <option value="all">All Categories</option>
+<option value="AI Platform/Analytics">AI Platform/Analytics</option>
+<option value="AI for CRM/Analytics">AI for CRM/Analytics</option>
+<option value="Analytics/BI">Analytics/BI</option>
+<option value="Audio Processing">Audio Processing</option>
+<option value="Audio/Video Editing">Audio/Video Editing</option>
+<option value="Automation (No-code)">Automation (No-code)</option>
+<option value="Automation (RPA)">Automation (RPA)</option>
+<option value="Chatbot">Chatbot</option>
+<option value="Coding Assistant">Coding Assistant</option>
+<option value="Computational Search">Computational Search</option>
+<option value="Design">Design</option>
+<option value="Image Editing">Image Editing</option>
+<option value="Image Enhancement">Image Enhancement</option>
+<option value="Image Generation">Image Generation</option>
+<option value="Marketing">Marketing</option>
+<option value="Music Generation">Music Generation</option>
+<option value="Photo Editing">Photo Editing</option>
+<option value="Productivity">Productivity</option>
+<option value="Research Assistant">Research Assistant</option>
+<option value="Search">Search</option>
+<option value="Soundscapes/Wellness AI">Soundscapes/Wellness AI</option>
+<option value="Speech Recognition">Speech Recognition</option>
+<option value="Text-to-Speech">Text-to-Speech</option>
+<option value="Transcription/Voice AI">Transcription/Voice AI</option>
+<option value="Translation">Translation</option>
+<option value="Video Creation">Video Creation</option>
+<option value="Video Generation">Video Generation</option>
+<option value="Voice Assistant">Voice Assistant</option>
+<option value="Voice Generation">Voice Generation</option>
+<option value="Writing">Writing</option>
+
+    </select>
+</div>
+<div class="grid" id="cards">
+
+    <div class="card" data-category="Translation">
+        <img src="https://yandex.com/favicon.ico" alt="logo">
+        <div class="title">Yandex Translate</div>
+        <div class="desc">AI writing assistant that expands on Grammarly for content generation. </div>
+        <div class="price">Free</div>
+        <a class="button" href="https://translate.yandex.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Translation">
+        <img src="https://logo.clearbit.com/microsoft.com" alt="logo">
+        <div class="title">Microsoft Translator</div>
+        <div class="desc">Russian based translator with decent accuracy.</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://translator.microsoft.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Translation">
+        <img src="https://logo.clearbit.com/deepl.com" alt="logo">
+        <div class="title">DeepL</div>
+        <div class="desc">Microsoft’s tool for real time translation.</div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://www.deepl.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Coding Assistant">
+        <img src="https://logo.clearbit.com/github.com" alt="logo">
+        <div class="title">GitHub Copilot</div>
+        <div class="desc">AI code suggestions; integrates with AWS. </div>
+        <div class="price">Subscription ($10/mo)</div>
+        <a class="button" href="https://github.com/features/copilot" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://www.nvidia.com/favicon.ico" alt="logo">
+        <div class="title">NVIDIA Broadcast</div>
+        <div class="desc">Audio/Video Enhancement</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://www.nvidia.com/en-us/geforce/broadcasting/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Automation (No-code)">
+        <img src="https://logo.clearbit.com/zapier.com" alt="logo">
+        <div class="title">Zapier</div>
+        <div class="desc">Automates tasks across Microsoft tools. </div>
+        <div class="price">Premium plans</div>
+        <a class="button" href="https://zapier.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Audio Processing">
+        <img src="https://logo.clearbit.com/lalalai.com" alt="logo">
+        <div class="title">Lalal.ai</div>
+        <div class="desc">Voice assistant with smart home and query features. </div>
+        <div class="price">Pay-per-use</div>
+        <a class="button" href="https://www.lalal.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://inflection.ai/favicon.ico" alt="logo">
+        <div class="title">Inflection AI Pi</div>
+        <div class="desc">Personal AI Assistant</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://inflection.ai/pi" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://www.tensorflow.org/favicon.ico" alt="logo">
+        <div class="title">TensorFlow</div>
+        <div class="desc">Machine Learning Framework</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://www.tensorflow.org/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://www.duolingo.com/favicon.png" alt="logo">
+        <div class="title">Duolingo</div>
+        <div class="desc">Language Learning</div>
+        <div class="price">Super ($7/mo)</div>
+        <a class="button" href="https://www.duolingo.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Soundscapes/Wellness AI">
+        <img src="https://logo.clearbit.com/endel.com" alt="logo">
+        <div class="title">Endel</div>
+        <div class="desc">Splits vocals and instruments from audio; useful for musicians. </div>
+        <div class="price">Subscription</div>
+        <a class="button" href="https://endel.io/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/prisma.com" alt="logo">
+        <div class="title">Prisma</div>
+        <div class="desc">Removes image backgrounds quickly and accurately. </div>
+        <div class="price">Premium</div>
+        <a class="button" href="https://prisma-ai.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Marketing">
+        <img src="https://logo.clearbit.com/jasper.com" alt="logo">
+        <div class="title">Jasper</div>
+        <div class="desc">AI writing tool specializing in marketing and blog content. </div>
+        <div class="price">Boss Mode</div>
+        <a class="button" href="https://jasper.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Search">
+        <img src="https://logo.clearbit.com/perplexity.com" alt="logo">
+        <div class="title">Perplexity AI</div>
+        <div class="desc">Combines AI and search to give concise, cited answers. </div>
+        <div class="price">Pro ($20/mo)</div>
+        <a class="button" href="https://www.perplexity.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Creation">
+        <img src="https://logo.clearbit.com/lumen5.com" alt="logo">
+        <div class="title">Lumen5</div>
+        <div class="desc">Drag and</div>
+        <div class="price">Premium</div>
+        <a class="button" href="https://lumen5.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Writing">
+        <img src="https://logo.clearbit.com/wordtune.com" alt="logo">
+        <div class="title">Wordtune</div>
+        <div class="desc">Enhances writing with grammar, tone, and clarity suggestions. </div>
+        <div class="price">Premium</div>
+        <a class="button" href="https://www.wordtune.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Coding Assistant">
+        <img src="https://logo.clearbit.com/replit.com" alt="logo">
+        <div class="title">Replit Ghostwriter</div>
+        <div class="desc">AI pair programmer for developers; live coding support. </div>
+        <div class="price">Subscription ($10/mo)</div>
+        <a class="button" href="https://replit.com/ghostwriter" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://www.datarobot.com/favicon.ico" alt="logo">
+        <div class="title">DataRobot</div>
+        <div class="desc">AutoML Platform</div>
+        <div class="price">Enterprise</div>
+        <a class="button" href="https://www.datarobot.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Music Generation">
+        <img src="https://logo.clearbit.com/amper.com" alt="logo">
+        <div class="title">Amper Music</div>
+        <div class="desc">Fast music creation; good for social media audio. </div>
+        <div class="price">Integrated</div>
+        <a class="button" href="https://www.shutterstock.com/solutions/ai-music" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Voice Assistant">
+        <img src="https://logo.clearbit.com/google.com" alt="logo">
+        <div class="title">Google Assistant</div>
+        <div class="desc">Voice based AI on iOS devices; handles basic queries.</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://assistant.google.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Voice Assistant">
+        <img src="https://logo.clearbit.com/apple.com" alt="logo">
+        <div class="title">Apple Siri</div>
+        <div class="desc">Text to</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://www.apple.com/siri/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://www.chegg.com/favicon.ico" alt="logo">
+        <div class="title">Chegg (CheggMate)</div>
+        <div class="desc">Study Assistant</div>
+        <div class="price">Study ($15/mo)</div>
+        <a class="button" href="https://www.chegg.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Marketing">
+        <img src="https://logo.clearbit.com/rytr.com" alt="logo">
+        <div class="title">Rytr</div>
+        <div class="desc">Optimizes marketing text based on performance data. </div>
+        <div class="price">Unlimited plan</div>
+        <a class="button" href="https://rytr.me/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/midjourney.com" alt="logo">
+        <div class="title">Midjourney</div>
+        <div class="desc">Text to image generation from OpenAI; known for surreal accuracy.</div>
+        <div class="price">Basic ($10/mo)</div>
+        <a class="button" href="https://midjourney.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Marketing">
+        <img src="https://logo.clearbit.com/writesonic.com" alt="logo">
+        <div class="title">Writesonic</div>
+        <div class="desc">Writing assistant with tone control and AI image generation. </div>
+        <div class="price">Unlimited plan</div>
+        <a class="button" href="https://writesonic.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://alphafold.ebi.ac.uk/favicon.ico" alt="logo">
+        <div class="title">DeepMind AlphaFold</div>
+        <div class="desc">Scientific Research AI</div>
+        <div class="price">Free (open)</div>
+        <a class="button" href="https://alphafold.ebi.ac.uk/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/characterai.com" alt="logo">
+        <div class="title">Character.AI</div>
+        <div class="desc">Engages in roleplay and character driven conversations; loved for entertainment value. </div>
+        <div class="price">c.ai+ (subscription)</div>
+        <a class="button" href="https://beta.character.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Editing">
+        <img src="https://logo.clearbit.com/faceapp.com" alt="logo">
+        <div class="title">FaceApp</div>
+        <div class="desc">Merges images using genes; experimental and creative. </div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://www.faceapp.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/openai.com" alt="logo">
+        <div class="title">OpenAI DALL-E</div>
+        <div class="desc">Open source model for customizable image generation.</div>
+        <div class="price">Credits</div>
+        <a class="button" href="https://openai.com/product/dall-e-2" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="AI for CRM/Analytics">
+        <img src="https://logo.clearbit.com/salesforce.com" alt="logo">
+        <div class="title">Salesforce Einstein</div>
+        <div class="desc">Computes factual answers using curated knowledge. </div>
+        <div class="price">Enterprise</div>
+        <a class="button" href="https://www.salesforce.com/products/einstein/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Translation">
+        <img src="https://logo.clearbit.com/google.com" alt="logo">
+        <div class="title">Google Translate</div>
+        <div class="desc">Known for accurate translations with natural phrasing. </div>
+        <div class="price">Free</div>
+        <a class="button" href="https://translate.google.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://quizlet.com/favicon.ico" alt="logo">
+        <div class="title">Quizlet</div>
+        <div class="desc">Learning Platform</div>
+        <div class="price">Plus</div>
+        <a class="button" href="https://quizlet.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Generation">
+        <img src="https://logo.clearbit.com/d-id.com" alt="logo">
+        <div class="title">D-ID</div>
+        <div class="desc">AI video tool with avatars for explainer and marketing videos. </div>
+        <div class="price">Credits</div>
+        <a class="button" href="https://www.d-id.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/nvidia.com" alt="logo">
+        <div class="title">NVIDIA Canvas</div>
+        <div class="desc">Generates videos with AI avatars; great for business explainer content. </div>
+        <div class="price">Free</div>
+        <a class="button" href="https://www.nvidia.com/en-us/studio/canvas/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Analytics/BI">
+        <img src="https://logo.clearbit.com/tableau.com" alt="logo">
+        <div class="title">Tableau (Ask Data)</div>
+        <div class="desc">AI platform for language processing and automation. </div>
+        <div class="price">License ($70/mo)</div>
+        <a class="button" href="https://www.tableau.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Music Generation">
+        <img src="https://logo.clearbit.com/soundraw.com" alt="logo">
+        <div class="title">Soundraw</div>
+        <div class="desc">Loops music using AI for creators and streamers. </div>
+        <div class="price">Pro ($17/mo)</div>
+        <a class="button" href="https://soundraw.io/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Generation">
+        <img src="https://logo.clearbit.com/heygen.com" alt="logo">
+        <div class="title">HeyGen</div>
+        <div class="desc">Offers avatar based news and training videos.</div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://heygen.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/google.com" alt="logo">
+        <div class="title">Google Bard</div>
+        <div class="desc">Experimental chatbot using Google's PaLM language model; useful for search based queries. </div>
+        <div class="price">Free</div>
+        <a class="button" href="https://bard.google.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://socratic.org/favicon.ico" alt="logo">
+        <div class="title">Socratic (Google)</div>
+        <div class="desc">Learning Assistant</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://socratic.org/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Voice Assistant">
+        <img src="https://logo.clearbit.com/amazon.com" alt="logo">
+        <div class="title">Amazon Alexa</div>
+        <div class="desc">Voice AI for search, reminders, and apps. </div>
+        <div class="price">Free (with device)</div>
+        <a class="button" href="https://amazon.com/alexa" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/anthropic.com" alt="logo">
+        <div class="title">Anthropic Claude</div>
+        <div class="desc">Privacy focused chatbot known for safety and ethical boundaries. </div>
+        <div class="price">Pro ($20/mo)</div>
+        <a class="button" href="https://claude.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Search">
+        <img src="https://logo.clearbit.com/youchat.com" alt="logo">
+        <div class="title">YouChat (You.com)</div>
+        <div class="desc">AI chatbot within the You.com search engine; blends web results and conversation. </div>
+        <div class="price">Free</div>
+        <a class="button" href="https://you.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/artbreeder.com" alt="logo">
+        <div class="title">Artbreeder</div>
+        <div class="desc">Turns sketches into photorealistic landscapes. </div>
+        <div class="price">Paid tiers</div>
+        <a class="button" href="https://www.artbreeder.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Writing">
+        <img src="https://logo.clearbit.com/grammarly.com" alt="logo">
+        <div class="title">Grammarly</div>
+        <div class="desc">Integrates with Notion; helps summarize, write, and automate notes. </div>
+        <div class="price">Premium</div>
+        <a class="button" href="https://www.grammarly.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/removebg.com" alt="logo">
+        <div class="title">Remove.bg</div>
+        <div class="desc">Enlarges photos while retaining quality using AI enhancement. </div>
+        <div class="price">Paid for HD</div>
+        <a class="button" href="https://www.remove.bg/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Automation (No-code)">
+        <img src="https://logo.clearbit.com/microsoft.com" alt="logo">
+        <div class="title">Microsoft Power Automate</div>
+        <div class="desc">BI and analytics platform; uses AI to detect trends. </div>
+        <div class="price">Per-user license</div>
+        <a class="button" href="https://powerautomate.microsoft.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Automation (RPA)">
+        <img src="https://logo.clearbit.com/automation.com" alt="logo">
+        <div class="title">Automation Anywhere</div>
+        <div class="desc">Scalable automation for regulated industries. </div>
+        <div class="price">Enterprise</div>
+        <a class="button" href="https://www.automationanywhere.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Music Generation">
+        <img src="https://logo.clearbit.com/aiva.com" alt="logo">
+        <div class="title">AIVA</div>
+        <div class="desc">AI music generator used for background scores. </div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://www.aiva.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://playground.com/favicon.ico" alt="logo">
+        <div class="title">Playground AI</div>
+        <div class="desc">Image Generation</div>
+        <div class="price">Pro available</div>
+        <a class="button" href="https://playgroundai.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Generation">
+        <img src="https://logo.clearbit.com/runway.com" alt="logo">
+        <div class="title">Runway ML</div>
+        <div class="desc">Transforms long videos into short highlights automatically. </div>
+        <div class="price">Pro plan</div>
+        <a class="button" href="https://runwayml.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="logo">
+        <div class="title">Hugging Face Hub</div>
+        <div class="desc">AI Models Platform</div>
+        <div class="price">Free (paid API)</div>
+        <a class="button" href="https://huggingface.co/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/stable.com" alt="logo">
+        <div class="title">Stable Diffusion</div>
+        <div class="desc">AI image generator inside Creative Cloud; perfect for Adobe users. </div>
+        <div class="price">Credits/Paygo</div>
+        <a class="button" href="https://stability.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Photo Editing">
+        <img src="https://logo.clearbit.com/luminar.com" alt="logo">
+        <div class="title">Luminar AI</div>
+        <div class="desc">Edits selfies with AI; age filters, smiles, and more. </div>
+        <div class="price">One-time ($79)</div>
+        <a class="button" href="https://skylum.com/luminar-ai" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Coding Assistant">
+        <img src="https://logo.clearbit.com/cursor.com" alt="logo">
+        <div class="title">Cursor</div>
+        <div class="desc">RPA platform automating repetitive business tasks. </div>
+        <div class="price">Pro ($25/mo)</div>
+        <a class="button" href="https://cursor.so/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Automation (RPA)">
+        <img src="https://logo.clearbit.com/uipath.com" alt="logo">
+        <div class="title">UiPath</div>
+        <div class="desc">End to</div>
+        <div class="price">Community/Enterprise</div>
+        <a class="button" href="https://www.uipath.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Coding Assistant">
+        <img src="https://logo.clearbit.com/amazon.com" alt="logo">
+        <div class="title">Amazon CodeWhisperer</div>
+        <div class="desc">Fast AI coding assistant; works with multiple languages. </div>
+        <div class="price">Free (personal)</div>
+        <a class="button" href="https://aws.amazon.com/codewhisperer/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://yiyan.baidu.com/favicon.ico" alt="logo">
+        <div class="title">Baidu Ernie Bot</div>
+        <div class="desc">Chatbot</div>
+        <div class="price">Free (China-only)</div>
+        <a class="button" href="https://yiyan.baidu.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://h2o.ai/favicon.ico" alt="logo">
+        <div class="title">H2O.ai</div>
+        <div class="desc">AutoML Platform</div>
+        <div class="price">Open Source/Enterprise</div>
+        <a class="button" href="https://h2o.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Transcription/Voice AI">
+        <img src="https://logo.clearbit.com/otterai.com" alt="logo">
+        <div class="title">Otter.ai</div>
+        <div class="desc">Industry leader in speech recognition; used in healthcare. </div>
+        <div class="price">Pro ($17/mo)</div>
+        <a class="button" href="https://otter.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Music Generation">
+        <img src="https://logo.clearbit.com/boomy.com" alt="logo">
+        <div class="title">Boomy</div>
+        <div class="desc">AI generated music with user</div>
+        <div class="price">Free plan</div>
+        <a class="button" href="https://boomy.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Generation">
+        <img src="https://logo.clearbit.com/colossyan.com" alt="logo">
+        <div class="title">Colossyan</div>
+        <div class="desc">Turns blog posts into videos automatically. </div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://colossyan.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Automation (RPA)">
+        <img src="https://logo.clearbit.com/blue.com" alt="logo">
+        <div class="title">Blue Prism</div>
+        <div class="desc">Automates workflows by connecting apps. </div>
+        <div class="price">Enterprise</div>
+        <a class="button" href="https://www.blueprism.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/huggingchat.com" alt="logo">
+        <div class="title">HuggingChat</div>
+        <div class="desc">Open source chatbot built on Hugging Face technology.</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://huggingface.co/chat/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Marketing">
+        <img src="https://logo.clearbit.com/anyword.com" alt="logo">
+        <div class="title">Anyword</div>
+        <div class="desc">Rewriting tool focused on improving clarity and tone. </div>
+        <div class="price">Pro plan</div>
+        <a class="button" href="https://anyword.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://photomath.com/favicon.ico" alt="logo">
+        <div class="title">Photomath</div>
+        <div class="desc">Math Solving App</div>
+        <div class="price">Plus</div>
+        <a class="button" href="https://photomath.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Speech Recognition">
+        <img src="https://logo.clearbit.com/nuance.com" alt="logo">
+        <div class="title">Nuance Dragon</div>
+        <div class="desc">Audio and video editing with transcription and overdub. </div>
+        <div class="price">Individual</div>
+        <a class="button" href="https://www.nuance.com/dragon.html" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/lensa.com" alt="logo">
+        <div class="title">Lensa</div>
+        <div class="desc">Turns photos into art using neural style transfer. </div>
+        <div class="price">Subscription</div>
+        <a class="button" href="https://lensa-ai.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Generation">
+        <img src="https://logo.clearbit.com/synthesia.com" alt="logo">
+        <div class="title">Synthesia</div>
+        <div class="desc">All in</div>
+        <div class="price">Paid (from $30/mo)</div>
+        <a class="button" href="https://www.synthesia.io/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Creation">
+        <img src="https://logo.clearbit.com/invideo.com" alt="logo">
+        <div class="title">InVideo</div>
+        <div class="desc">AI composer for cinematic and classical music. </div>
+        <div class="price">Business</div>
+        <a class="button" href="https://invideo.io/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://pytorch.org/favicon.ico" alt="logo">
+        <div class="title">PyTorch</div>
+        <div class="desc">Machine Learning Framework</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://pytorch.org/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://www.alibabacloud.com/favicon.ico" alt="logo">
+        <div class="title">Alibaba Tongyi Qianwen</div>
+        <div class="desc">Chatbot</div>
+        <div class="price">Internal/Cloud</div>
+        <a class="button" href="https://www.alibabacloud.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://www.khanacademy.org/favicon.ico" alt="logo">
+        <div class="title">Khanmigo (Khan Academy)</div>
+        <div class="desc">Learning Assistant</div>
+        <div class="price">Donation ($20/mo)</div>
+        <a class="button" href="https://www.khanacademy.org/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Computational Search">
+        <img src="https://logo.clearbit.com/wolframalpha.com" alt="logo">
+        <div class="title">WolframAlpha</div>
+        <div class="desc">AI research assistant; finds papers and extracts evidence. </div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://www.wolframalpha.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/openai.com" alt="logo">
+        <div class="title">ChatGPT</div>
+        <div class="desc">Powerful text generation AI, great for conversations and creative writing. </div>
+        <div class="price">Plus ($20/mo)</div>
+        <a class="button" href="https://chat.openai.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Research Assistant">
+        <img src="https://logo.clearbit.com/elicit.com" alt="logo">
+        <div class="title">Elicit</div>
+        <div class="desc">Translates text between 100+ languages. </div>
+        <div class="price">Free</div>
+        <a class="button" href="https://elicit.org/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Voice Generation">
+        <img src="https://logo.clearbit.com/elevenlabs.com" alt="logo">
+        <div class="title">ElevenLabs</div>
+        <div class="desc">Voice over platform for videos and podcasts.</div>
+        <div class="price">Starter ($5/mo)</div>
+        <a class="button" href="https://elevenlabs.io/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Marketing">
+        <img src="https://logo.clearbit.com/copyai.com" alt="logo">
+        <div class="title">Copy.ai</div>
+        <div class="desc">Great for ad copy, social media, and product descriptions. </div>
+        <div class="price">Pro plan</div>
+        <a class="button" href="https://www.copy.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Writing">
+        <img src="https://logo.clearbit.com/sudowrite.com" alt="logo">
+        <div class="title">Sudowrite</div>
+        <div class="desc">Fiction writing tool; useful for creative writers and storytellers. </div>
+        <div class="price">Premium</div>
+        <a class="button" href="https://www.sudowrite.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/adobe.com" alt="logo">
+        <div class="title">Adobe Firefly</div>
+        <div class="desc">Quick image generation with pre trained styles; ideal for marketers.</div>
+        <div class="price">Included (Creative Cloud)</div>
+        <a class="button" href="https://firefly.adobe.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Voice Generation">
+        <img src="https://logo.clearbit.com/resemble.com" alt="logo">
+        <div class="title">Resemble AI</div>
+        <div class="desc">Transcribes meetings and interviews in real time. </div>
+        <div class="price">Enterprise</div>
+        <a class="button" href="https://www.resemble.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/bing.com" alt="logo">
+        <div class="title">Bing Chat</div>
+        <div class="desc">Integrates with search engine; provides conversational and factual responses. </div>
+        <div class="price">Free</div>
+        <a class="button" href="https://bing.com/new" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/replika.com" alt="logo">
+        <div class="title">Replika</div>
+        <div class="desc">AI companion focused on emotional support and self improvement. </div>
+        <div class="price">Pro (subscription)</div>
+        <a class="button" href="https://replika.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="AI Platform/Analytics">
+        <img src="https://logo.clearbit.com/ibm.com" alt="logo">
+        <div class="title">IBM Watson</div>
+        <div class="desc">Embedded AI in CRM for smarter sales. </div>
+        <div class="price">Enterprise</div>
+        <a class="button" href="https://www.ibm.com/watson" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/bing.com" alt="logo">
+        <div class="title">Bing Image Creator</div>
+        <div class="desc">Accessible image generation tool with a credits based system.</div>
+        <div class="price">Free</div>
+        <a class="button" href="https://bing.com/create" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://fireflies.ai/favicon.ico" alt="logo">
+        <div class="title">Fireflies.ai</div>
+        <div class="desc">Meeting Assistant/Voice AI</div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://fireflies.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Generation">
+        <img src="https://logo.clearbit.com/deepbrain.com" alt="logo">
+        <div class="title">DeepBrain AI</div>
+        <div class="desc">Avatar based video platform used in corporate training.</div>
+        <div class="price">Paid</div>
+        <a class="button" href="https://www.deepbrainai.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Chatbot">
+        <img src="https://logo.clearbit.com/chatsonic.com" alt="logo">
+        <div class="title">ChatSonic</div>
+        <div class="desc">ChatGPT alternative with real time data access and image generation.</div>
+        <div class="price">Premium (paid)</div>
+        <a class="button" href="https://writesonic.com/chat" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Productivity">
+        <img src="https://logo.clearbit.com/notion.com" alt="logo">
+        <div class="title">Notion AI</div>
+        <div class="desc">Stunning image generation with artistic control and depth. </div>
+        <div class="price">AI Add-on ($10/mo)</div>
+        <a class="button" href="https://www.notion.so/product/ai" target="_blank">Visit</a>
+    </div>
     
-    <div class="tool-card">
-      <img src="https://www.duolingo.com/favicon.png" alt="Duolingo logo" class="tool-logo" />
-      <div class="tool-title">Duolingo</div>
-      <div class="tool-category">Language Learning</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Super ($7/mo)</span>
-        <a href="https://www.duolingo.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/endel.com" alt="Endel logo" class="tool-logo" />
-      <div class="tool-title">Endel</div>
-      <div class="tool-category">Splits vocals and instruments from audio; useful for musicians. </div>
-      <div class="tool-description">Soundscapes/Wellness AI</div>
-      <div class="tool-footer">
-        <span class="price-tag">Subscription</span>
-        <a href="https://endel.io/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/prisma.com" alt="Prisma logo" class="tool-logo" />
-      <div class="tool-title">Prisma</div>
-      <div class="tool-category">Removes image backgrounds quickly and accurately. </div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium</span>
-        <a href="https://prisma-ai.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/jasper.com" alt="Jasper logo" class="tool-logo" />
-      <div class="tool-title">Jasper</div>
-      <div class="tool-category">AI writing tool specializing in marketing and blog content. </div>
-      <div class="tool-description">Marketing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Boss Mode</span>
-        <a href="https://jasper.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/perplexity.com" alt="Perplexity AI logo" class="tool-logo" />
-      <div class="tool-title">Perplexity AI</div>
-      <div class="tool-category">Combines AI and search to give concise, cited answers. </div>
-      <div class="tool-description">Search</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($20/mo)</span>
-        <a href="https://www.perplexity.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/lumen5.com" alt="Lumen5 logo" class="tool-logo" />
-      <div class="tool-title">Lumen5</div>
-      <div class="tool-category">Drag and</div>
-      <div class="tool-description">Video Creation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium</span>
-        <a href="https://lumen5.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/wordtune.com" alt="Wordtune logo" class="tool-logo" />
-      <div class="tool-title">Wordtune</div>
-      <div class="tool-category">Enhances writing with grammar, tone, and clarity suggestions. </div>
-      <div class="tool-description">Writing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium</span>
-        <a href="https://www.wordtune.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/replit.com" alt="Replit Ghostwriter logo" class="tool-logo" />
-      <div class="tool-title">Replit Ghostwriter</div>
-      <div class="tool-category">AI pair programmer for developers; live coding support. </div>
-      <div class="tool-description">Coding Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Subscription ($10/mo)</span>
-        <a href="https://replit.com/ghostwriter" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://www.datarobot.com/favicon.ico" alt="DataRobot logo" class="tool-logo" />
-      <div class="tool-title">DataRobot</div>
-      <div class="tool-category">AutoML Platform</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Enterprise</span>
-        <a href="https://www.datarobot.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/amper.com" alt="Amper Music logo" class="tool-logo" />
-      <div class="tool-title">Amper Music</div>
-      <div class="tool-category">Fast music creation; good for social media audio. </div>
-      <div class="tool-description">Music Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Integrated</span>
-        <a href="https://www.shutterstock.com/solutions/ai-music" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/google.com" alt="Google Assistant logo" class="tool-logo" />
-      <div class="tool-title">Google Assistant</div>
-      <div class="tool-category">Voice based AI on iOS devices; handles basic queries.</div>
-      <div class="tool-description">Voice Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://assistant.google.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/apple.com" alt="Apple Siri logo" class="tool-logo" />
-      <div class="tool-title">Apple Siri</div>
-      <div class="tool-category">Text to</div>
-      <div class="tool-description">Voice Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://www.apple.com/siri/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://www.chegg.com/favicon.ico" alt="Chegg (CheggMate) logo" class="tool-logo" />
-      <div class="tool-title">Chegg (CheggMate)</div>
-      <div class="tool-category">Study Assistant</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Study ($15/mo)</span>
-        <a href="https://www.chegg.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/rytr.com" alt="Rytr logo" class="tool-logo" />
-      <div class="tool-title">Rytr</div>
-      <div class="tool-category">Optimizes marketing text based on performance data. </div>
-      <div class="tool-description">Marketing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Unlimited plan</span>
-        <a href="https://rytr.me/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/midjourney.com" alt="Midjourney logo" class="tool-logo" />
-      <div class="tool-title">Midjourney</div>
-      <div class="tool-category">Text to image generation from OpenAI; known for surreal accuracy.</div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Basic ($10/mo)</span>
-        <a href="https://midjourney.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/writesonic.com" alt="Writesonic logo" class="tool-logo" />
-      <div class="tool-title">Writesonic</div>
-      <div class="tool-category">Writing assistant with tone control and AI image generation. </div>
-      <div class="tool-description">Marketing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Unlimited plan</span>
-        <a href="https://writesonic.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://alphafold.ebi.ac.uk/favicon.ico" alt="DeepMind AlphaFold logo" class="tool-logo" />
-      <div class="tool-title">DeepMind AlphaFold</div>
-      <div class="tool-category">Scientific Research AI</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free (open)</span>
-        <a href="https://alphafold.ebi.ac.uk/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/characterai.com" alt="Character.AI logo" class="tool-logo" />
-      <div class="tool-title">Character.AI</div>
-      <div class="tool-category">Engages in roleplay and character driven conversations; loved for entertainment value. </div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">c.ai+ (subscription)</span>
-        <a href="https://beta.character.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/faceapp.com" alt="FaceApp logo" class="tool-logo" />
-      <div class="tool-title">FaceApp</div>
-      <div class="tool-category">Merges images using genes; experimental and creative. </div>
-      <div class="tool-description">Image Editing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://www.faceapp.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/openai.com" alt="OpenAI DALL-E logo" class="tool-logo" />
-      <div class="tool-title">OpenAI DALL-E</div>
-      <div class="tool-category">Open source model for customizable image generation.</div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Credits</span>
-        <a href="https://openai.com/product/dall-e-2" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce Einstein logo" class="tool-logo" />
-      <div class="tool-title">Salesforce Einstein</div>
-      <div class="tool-category">Computes factual answers using curated knowledge. </div>
-      <div class="tool-description">AI for CRM/Analytics</div>
-      <div class="tool-footer">
-        <span class="price-tag">Enterprise</span>
-        <a href="https://www.salesforce.com/products/einstein/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/google.com" alt="Google Translate logo" class="tool-logo" />
-      <div class="tool-title">Google Translate</div>
-      <div class="tool-category">Known for accurate translations with natural phrasing. </div>
-      <div class="tool-description">Translation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://translate.google.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://quizlet.com/favicon.ico" alt="Quizlet logo" class="tool-logo" />
-      <div class="tool-title">Quizlet</div>
-      <div class="tool-category">Learning Platform</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Plus</span>
-        <a href="https://quizlet.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/d-id.com" alt="D-ID logo" class="tool-logo" />
-      <div class="tool-title">D-ID</div>
-      <div class="tool-category">AI video tool with avatars for explainer and marketing videos. </div>
-      <div class="tool-description">Video Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Credits</span>
-        <a href="https://www.d-id.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/nvidia.com" alt="NVIDIA Canvas logo" class="tool-logo" />
-      <div class="tool-title">NVIDIA Canvas</div>
-      <div class="tool-category">Generates videos with AI avatars; great for business explainer content. </div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://www.nvidia.com/en-us/studio/canvas/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/tableau.com" alt="Tableau (Ask Data) logo" class="tool-logo" />
-      <div class="tool-title">Tableau (Ask Data)</div>
-      <div class="tool-category">AI platform for language processing and automation. </div>
-      <div class="tool-description">Analytics/BI</div>
-      <div class="tool-footer">
-        <span class="price-tag">License ($70/mo)</span>
-        <a href="https://www.tableau.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/soundraw.com" alt="Soundraw logo" class="tool-logo" />
-      <div class="tool-title">Soundraw</div>
-      <div class="tool-category">Loops music using AI for creators and streamers. </div>
-      <div class="tool-description">Music Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($17/mo)</span>
-        <a href="https://soundraw.io/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/heygen.com" alt="HeyGen logo" class="tool-logo" />
-      <div class="tool-title">HeyGen</div>
-      <div class="tool-category">Offers avatar based news and training videos.</div>
-      <div class="tool-description">Video Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://heygen.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/google.com" alt="Google Bard logo" class="tool-logo" />
-      <div class="tool-title">Google Bard</div>
-      <div class="tool-category">Experimental chatbot using Google's PaLM language model; useful for search based queries. </div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://bard.google.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://socratic.org/favicon.ico" alt="Socratic (Google) logo" class="tool-logo" />
-      <div class="tool-title">Socratic (Google)</div>
-      <div class="tool-category">Learning Assistant</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://socratic.org/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/amazon.com" alt="Amazon Alexa logo" class="tool-logo" />
-      <div class="tool-title">Amazon Alexa</div>
-      <div class="tool-category">Voice AI for search, reminders, and apps. </div>
-      <div class="tool-description">Voice Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free (with device)</span>
-        <a href="https://amazon.com/alexa" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/anthropic.com" alt="Anthropic Claude logo" class="tool-logo" />
-      <div class="tool-title">Anthropic Claude</div>
-      <div class="tool-category">Privacy focused chatbot known for safety and ethical boundaries. </div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($20/mo)</span>
-        <a href="https://claude.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/youchat.com" alt="YouChat (You.com) logo" class="tool-logo" />
-      <div class="tool-title">YouChat (You.com)</div>
-      <div class="tool-category">AI chatbot within the You.com search engine; blends web results and conversation. </div>
-      <div class="tool-description">Search</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://you.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/artbreeder.com" alt="Artbreeder logo" class="tool-logo" />
-      <div class="tool-title">Artbreeder</div>
-      <div class="tool-category">Turns sketches into photorealistic landscapes. </div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Paid tiers</span>
-        <a href="https://www.artbreeder.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/grammarly.com" alt="Grammarly logo" class="tool-logo" />
-      <div class="tool-title">Grammarly</div>
-      <div class="tool-category">Integrates with Notion; helps summarize, write, and automate notes. </div>
-      <div class="tool-description">Writing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium</span>
-        <a href="https://www.grammarly.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/removebg.com" alt="Remove.bg logo" class="tool-logo" />
-      <div class="tool-title">Remove.bg</div>
-      <div class="tool-category">Enlarges photos while retaining quality using AI enhancement. </div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Paid for HD</span>
-        <a href="https://www.remove.bg/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Power Automate logo" class="tool-logo" />
-      <div class="tool-title">Microsoft Power Automate</div>
-      <div class="tool-category">BI and analytics platform; uses AI to detect trends. </div>
-      <div class="tool-description">Automation (No-code)</div>
-      <div class="tool-footer">
-        <span class="price-tag">Per-user license</span>
-        <a href="https://powerautomate.microsoft.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/automation.com" alt="Automation Anywhere logo" class="tool-logo" />
-      <div class="tool-title">Automation Anywhere</div>
-      <div class="tool-category">Scalable automation for regulated industries. </div>
-      <div class="tool-description">Automation (RPA)</div>
-      <div class="tool-footer">
-        <span class="price-tag">Enterprise</span>
-        <a href="https://www.automationanywhere.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/aiva.com" alt="AIVA logo" class="tool-logo" />
-      <div class="tool-title">AIVA</div>
-      <div class="tool-category">AI music generator used for background scores. </div>
-      <div class="tool-description">Music Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://www.aiva.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://playground.com/favicon.ico" alt="Playground AI logo" class="tool-logo" />
-      <div class="tool-title">Playground AI</div>
-      <div class="tool-category">Image Generation</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro available</span>
-        <a href="https://playgroundai.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/runway.com" alt="Runway ML logo" class="tool-logo" />
-      <div class="tool-title">Runway ML</div>
-      <div class="tool-category">Transforms long videos into short highlights automatically. </div>
-      <div class="tool-description">Video Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro plan</span>
-        <a href="https://runwayml.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face Hub logo" class="tool-logo" />
-      <div class="tool-title">Hugging Face Hub</div>
-      <div class="tool-category">AI Models Platform</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free (paid API)</span>
-        <a href="https://huggingface.co/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/stable.com" alt="Stable Diffusion logo" class="tool-logo" />
-      <div class="tool-title">Stable Diffusion</div>
-      <div class="tool-category">AI image generator inside Creative Cloud; perfect for Adobe users. </div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Credits/Paygo</span>
-        <a href="https://stability.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/luminar.com" alt="Luminar AI logo" class="tool-logo" />
-      <div class="tool-title">Luminar AI</div>
-      <div class="tool-category">Edits selfies with AI; age filters, smiles, and more. </div>
-      <div class="tool-description">Photo Editing</div>
-      <div class="tool-footer">
-        <span class="price-tag">One-time ($79)</span>
-        <a href="https://skylum.com/luminar-ai" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/cursor.com" alt="Cursor logo" class="tool-logo" />
-      <div class="tool-title">Cursor</div>
-      <div class="tool-category">RPA platform automating repetitive business tasks. </div>
-      <div class="tool-description">Coding Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($25/mo)</span>
-        <a href="https://cursor.so/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/uipath.com" alt="UiPath logo" class="tool-logo" />
-      <div class="tool-title">UiPath</div>
-      <div class="tool-category">End to</div>
-      <div class="tool-description">Automation (RPA)</div>
-      <div class="tool-footer">
-        <span class="price-tag">Community/Enterprise</span>
-        <a href="https://www.uipath.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/amazon.com" alt="Amazon CodeWhisperer logo" class="tool-logo" />
-      <div class="tool-title">Amazon CodeWhisperer</div>
-      <div class="tool-category">Fast AI coding assistant; works with multiple languages. </div>
-      <div class="tool-description">Coding Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free (personal)</span>
-        <a href="https://aws.amazon.com/codewhisperer/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://yiyan.baidu.com/favicon.ico" alt="Baidu Ernie Bot logo" class="tool-logo" />
-      <div class="tool-title">Baidu Ernie Bot</div>
-      <div class="tool-category">Chatbot</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free (China-only)</span>
-        <a href="https://yiyan.baidu.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://h2o.ai/favicon.ico" alt="H2O.ai logo" class="tool-logo" />
-      <div class="tool-title">H2O.ai</div>
-      <div class="tool-category">AutoML Platform</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Open Source/Enterprise</span>
-        <a href="https://h2o.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/otterai.com" alt="Otter.ai logo" class="tool-logo" />
-      <div class="tool-title">Otter.ai</div>
-      <div class="tool-category">Industry leader in speech recognition; used in healthcare. </div>
-      <div class="tool-description">Transcription/Voice AI</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($17/mo)</span>
-        <a href="https://otter.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/boomy.com" alt="Boomy logo" class="tool-logo" />
-      <div class="tool-title">Boomy</div>
-      <div class="tool-category">AI generated music with user</div>
-      <div class="tool-description">Music Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free plan</span>
-        <a href="https://boomy.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/colossyan.com" alt="Colossyan logo" class="tool-logo" />
-      <div class="tool-title">Colossyan</div>
-      <div class="tool-category">Turns blog posts into videos automatically. </div>
-      <div class="tool-description">Video Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://colossyan.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/blue.com" alt="Blue Prism logo" class="tool-logo" />
-      <div class="tool-title">Blue Prism</div>
-      <div class="tool-category">Automates workflows by connecting apps. </div>
-      <div class="tool-description">Automation (RPA)</div>
-      <div class="tool-footer">
-        <span class="price-tag">Enterprise</span>
-        <a href="https://www.blueprism.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/huggingchat.com" alt="HuggingChat logo" class="tool-logo" />
-      <div class="tool-title">HuggingChat</div>
-      <div class="tool-category">Open source chatbot built on Hugging Face technology.</div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://huggingface.co/chat/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/anyword.com" alt="Anyword logo" class="tool-logo" />
-      <div class="tool-title">Anyword</div>
-      <div class="tool-category">Rewriting tool focused on improving clarity and tone. </div>
-      <div class="tool-description">Marketing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro plan</span>
-        <a href="https://anyword.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://photomath.com/favicon.ico" alt="Photomath logo" class="tool-logo" />
-      <div class="tool-title">Photomath</div>
-      <div class="tool-category">Math Solving App</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Plus</span>
-        <a href="https://photomath.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/nuance.com" alt="Nuance Dragon logo" class="tool-logo" />
-      <div class="tool-title">Nuance Dragon</div>
-      <div class="tool-category">Audio and video editing with transcription and overdub. </div>
-      <div class="tool-description">Speech Recognition</div>
-      <div class="tool-footer">
-        <span class="price-tag">Individual</span>
-        <a href="https://www.nuance.com/dragon.html" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/lensa.com" alt="Lensa logo" class="tool-logo" />
-      <div class="tool-title">Lensa</div>
-      <div class="tool-category">Turns photos into art using neural style transfer. </div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Subscription</span>
-        <a href="https://lensa-ai.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/synthesia.com" alt="Synthesia logo" class="tool-logo" />
-      <div class="tool-title">Synthesia</div>
-      <div class="tool-category">All in</div>
-      <div class="tool-description">Video Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Paid (from $30/mo)</span>
-        <a href="https://www.synthesia.io/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/invideo.com" alt="InVideo logo" class="tool-logo" />
-      <div class="tool-title">InVideo</div>
-      <div class="tool-category">AI composer for cinematic and classical music. </div>
-      <div class="tool-description">Video Creation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Business</span>
-        <a href="https://invideo.io/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://pytorch.org/favicon.ico" alt="PyTorch logo" class="tool-logo" />
-      <div class="tool-title">PyTorch</div>
-      <div class="tool-category">Machine Learning Framework</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://pytorch.org/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://www.alibabacloud.com/favicon.ico" alt="Alibaba Tongyi Qianwen logo" class="tool-logo" />
-      <div class="tool-title">Alibaba Tongyi Qianwen</div>
-      <div class="tool-category">Chatbot</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Internal/Cloud</span>
-        <a href="https://www.alibabacloud.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://www.khanacademy.org/favicon.ico" alt="Khanmigo (Khan Academy) logo" class="tool-logo" />
-      <div class="tool-title">Khanmigo (Khan Academy)</div>
-      <div class="tool-category">Learning Assistant</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Donation ($20/mo)</span>
-        <a href="https://www.khanacademy.org/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/wolframalpha.com" alt="WolframAlpha logo" class="tool-logo" />
-      <div class="tool-title">WolframAlpha</div>
-      <div class="tool-category">AI research assistant; finds papers and extracts evidence. </div>
-      <div class="tool-description">Computational Search</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://www.wolframalpha.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/openai.com" alt="ChatGPT logo" class="tool-logo" />
-      <div class="tool-title">ChatGPT</div>
-      <div class="tool-category">Powerful text generation AI, great for conversations and creative writing. </div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">Plus ($20/mo)</span>
-        <a href="https://chat.openai.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/elicit.com" alt="Elicit logo" class="tool-logo" />
-      <div class="tool-title">Elicit</div>
-      <div class="tool-category">Translates text between 100+ languages. </div>
-      <div class="tool-description">Research Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://elicit.org/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/elevenlabs.com" alt="ElevenLabs logo" class="tool-logo" />
-      <div class="tool-title">ElevenLabs</div>
-      <div class="tool-category">Voice over platform for videos and podcasts.</div>
-      <div class="tool-description">Voice Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Starter ($5/mo)</span>
-        <a href="https://elevenlabs.io/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/copyai.com" alt="Copy.ai logo" class="tool-logo" />
-      <div class="tool-title">Copy.ai</div>
-      <div class="tool-category">Great for ad copy, social media, and product descriptions. </div>
-      <div class="tool-description">Marketing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro plan</span>
-        <a href="https://www.copy.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/sudowrite.com" alt="Sudowrite logo" class="tool-logo" />
-      <div class="tool-title">Sudowrite</div>
-      <div class="tool-category">Fiction writing tool; useful for creative writers and storytellers. </div>
-      <div class="tool-description">Writing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium</span>
-        <a href="https://www.sudowrite.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/adobe.com" alt="Adobe Firefly logo" class="tool-logo" />
-      <div class="tool-title">Adobe Firefly</div>
-      <div class="tool-category">Quick image generation with pre trained styles; ideal for marketers.</div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Included (Creative Cloud)</span>
-        <a href="https://firefly.adobe.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/resemble.com" alt="Resemble AI logo" class="tool-logo" />
-      <div class="tool-title">Resemble AI</div>
-      <div class="tool-category">Transcribes meetings and interviews in real time. </div>
-      <div class="tool-description">Voice Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Enterprise</span>
-        <a href="https://www.resemble.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/bing.com" alt="Bing Chat logo" class="tool-logo" />
-      <div class="tool-title">Bing Chat</div>
-      <div class="tool-category">Integrates with search engine; provides conversational and factual responses. </div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://bing.com/new" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/replika.com" alt="Replika logo" class="tool-logo" />
-      <div class="tool-title">Replika</div>
-      <div class="tool-category">AI companion focused on emotional support and self improvement. </div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro (subscription)</span>
-        <a href="https://replika.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/ibm.com" alt="IBM Watson logo" class="tool-logo" />
-      <div class="tool-title">IBM Watson</div>
-      <div class="tool-category">Embedded AI in CRM for smarter sales. </div>
-      <div class="tool-description">AI Platform/Analytics</div>
-      <div class="tool-footer">
-        <span class="price-tag">Enterprise</span>
-        <a href="https://www.ibm.com/watson" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/bing.com" alt="Bing Image Creator logo" class="tool-logo" />
-      <div class="tool-title">Bing Image Creator</div>
-      <div class="tool-category">Accessible image generation tool with a credits based system.</div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Free</span>
-        <a href="https://bing.com/create" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://fireflies.ai/favicon.ico" alt="Fireflies.ai logo" class="tool-logo" />
-      <div class="tool-title">Fireflies.ai</div>
-      <div class="tool-category">Meeting Assistant/Voice AI</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://fireflies.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/deepbrain.com" alt="DeepBrain AI logo" class="tool-logo" />
-      <div class="tool-title">DeepBrain AI</div>
-      <div class="tool-category">Avatar based video platform used in corporate training.</div>
-      <div class="tool-description">Video Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Paid</span>
-        <a href="https://www.deepbrainai.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/chatsonic.com" alt="ChatSonic logo" class="tool-logo" />
-      <div class="tool-title">ChatSonic</div>
-      <div class="tool-category">ChatGPT alternative with real time data access and image generation.</div>
-      <div class="tool-description">Chatbot</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium (paid)</span>
-        <a href="https://writesonic.com/chat" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/notion.com" alt="Notion AI logo" class="tool-logo" />
-      <div class="tool-title">Notion AI</div>
-      <div class="tool-category">Stunning image generation with artistic control and depth. </div>
-      <div class="tool-description">Productivity</div>
-      <div class="tool-footer">
-        <span class="price-tag">AI Add-on ($10/mo)</span>
-        <a href="https://www.notion.so/product/ai" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://quillbot.com/images/favicon.ico" alt="QuillBot logo" class="tool-logo" />
-      <div class="tool-title">QuillBot</div>
-      <div class="tool-category">Writing Assistant</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium ($8/mo)</span>
-        <a href="https://quillbot.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/nightcafe.com" alt="NightCafe logo" class="tool-logo" />
-      <div class="tool-title">NightCafe</div>
-      <div class="tool-category">Adds AI powered design features into the Canva suite.</div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Credits</span>
-        <a href="https://nightcafe.studio/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://github.githubassets.com/favicons/favicon.svg" alt="Auto-GPT logo" class="tool-logo" />
-      <div class="tool-title">Auto-GPT</div>
-      <div class="tool-category">Autonomous AI Agent</div>
-      <div class="tool-description"></div>
-      <div class="tool-footer">
-        <span class="price-tag">Free (open-source)</span>
-        <a href="https://github.com/Significant-Gravitas/Auto-GPT" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/leonardo.com" alt="Leonardo AI logo" class="tool-logo" />
-      <div class="tool-title">Leonardo AI</div>
-      <div class="tool-category">Uses DALL·E inside Bing for easy, fast image generation. </div>
-      <div class="tool-description">Image Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro (credits)</span>
-        <a href="https://leonardo.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/topaz.com" alt="Topaz Gigapixel AI logo" class="tool-logo" />
-      <div class="tool-title">Topaz Gigapixel AI</div>
-      <div class="tool-category">Enhances portraits and landscapes using AI presets. </div>
-      <div class="tool-description">Image Enhancement</div>
-      <div class="tool-footer">
-        <span class="price-tag">One-time ($99)</span>
-        <a href="https://www.topazlabs.com/gigapixel-ai" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/tabnine.com" alt="Tabnine logo" class="tool-logo" />
-      <div class="tool-title">Tabnine</div>
-      <div class="tool-category">Helps write and debug code inside Replit. </div>
-      <div class="tool-description">Coding Assistant</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($12/mo)</span>
-        <a href="https://www.tabnine.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/mubert.com" alt="Mubert logo" class="tool-logo" />
-      <div class="tool-title">Mubert</div>
-      <div class="tool-category">Soundscape generator for focus, sleep, and relaxation. </div>
-      <div class="tool-description">Music Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($14/mo)</span>
-        <a href="https://mubert.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/descript.com" alt="Descript logo" class="tool-logo" />
-      <div class="tool-title">Descript</div>
-      <div class="tool-category">Turns text into spoken word; useful for accessibility. </div>
-      <div class="tool-description">Audio/Video Editing</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro ($12/mo)</span>
-        <a href="https://www.descript.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/murf.com" alt="Murf AI logo" class="tool-logo" />
-      <div class="tool-title">Murf AI</div>
-      <div class="tool-category">Custom AI voices; used in games and branding. </div>
-      <div class="tool-description">Voice Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro</span>
-        <a href="https://murf.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/canva.com" alt="Canva (AI features) logo" class="tool-logo" />
-      <div class="tool-title">Canva (AI features)</div>
-      <div class="tool-category">Photo editing tool with advanced AI filters and avatars. </div>
-      <div class="tool-description">Design</div>
-      <div class="tool-footer">
-        <span class="price-tag">Pro available</span>
-        <a href="https://www.canva.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/speechify.com" alt="Speechify logo" class="tool-logo" />
-      <div class="tool-title">Speechify</div>
-      <div class="tool-category">Autocompletes code and suggests functions in real time. </div>
-      <div class="tool-description">Text-to-Speech</div>
-      <div class="tool-footer">
-        <span class="price-tag">Premium</span>
-        <a href="https://speechify.com/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-    <div class="tool-card">
-      <img src="https://logo.clearbit.com/pictory.com" alt="Pictory logo" class="tool-logo" />
-      <div class="tool-title">Pictory</div>
-      <div class="tool-category">ID  Creates talking avatars from still photos; great for pitches.</div>
-      <div class="tool-description">Video Generation</div>
-      <div class="tool-footer">
-        <span class="price-tag">Standard</span>
-        <a href="https://pictory.ai/" class="visit-button" target="_blank">Visit</a>
-      </div>
-    </div>
-    
-  </div>
+    <div class="card" data-category="nan">
+        <img src="https://quillbot.com/images/favicon.ico" alt="logo">
+        <div class="title">QuillBot</div>
+        <div class="desc">Writing Assistant</div>
+        <div class="price">Premium ($8/mo)</div>
+        <a class="button" href="https://quillbot.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/nightcafe.com" alt="logo">
+        <div class="title">NightCafe</div>
+        <div class="desc">Adds AI powered design features into the Canva suite.</div>
+        <div class="price">Credits</div>
+        <a class="button" href="https://nightcafe.studio/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="nan">
+        <img src="https://github.githubassets.com/favicons/favicon.svg" alt="logo">
+        <div class="title">Auto-GPT</div>
+        <div class="desc">Autonomous AI Agent</div>
+        <div class="price">Free (open-source)</div>
+        <a class="button" href="https://github.com/Significant-Gravitas/Auto-GPT" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Generation">
+        <img src="https://logo.clearbit.com/leonardo.com" alt="logo">
+        <div class="title">Leonardo AI</div>
+        <div class="desc">Uses DALL·E inside Bing for easy, fast image generation. </div>
+        <div class="price">Pro (credits)</div>
+        <a class="button" href="https://leonardo.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Image Enhancement">
+        <img src="https://logo.clearbit.com/topaz.com" alt="logo">
+        <div class="title">Topaz Gigapixel AI</div>
+        <div class="desc">Enhances portraits and landscapes using AI presets. </div>
+        <div class="price">One-time ($99)</div>
+        <a class="button" href="https://www.topazlabs.com/gigapixel-ai" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Coding Assistant">
+        <img src="https://logo.clearbit.com/tabnine.com" alt="logo">
+        <div class="title">Tabnine</div>
+        <div class="desc">Helps write and debug code inside Replit. </div>
+        <div class="price">Pro ($12/mo)</div>
+        <a class="button" href="https://www.tabnine.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Music Generation">
+        <img src="https://logo.clearbit.com/mubert.com" alt="logo">
+        <div class="title">Mubert</div>
+        <div class="desc">Soundscape generator for focus, sleep, and relaxation. </div>
+        <div class="price">Pro ($14/mo)</div>
+        <a class="button" href="https://mubert.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Audio/Video Editing">
+        <img src="https://logo.clearbit.com/descript.com" alt="logo">
+        <div class="title">Descript</div>
+        <div class="desc">Turns text into spoken word; useful for accessibility. </div>
+        <div class="price">Pro ($12/mo)</div>
+        <a class="button" href="https://www.descript.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Voice Generation">
+        <img src="https://logo.clearbit.com/murf.com" alt="logo">
+        <div class="title">Murf AI</div>
+        <div class="desc">Custom AI voices; used in games and branding. </div>
+        <div class="price">Pro</div>
+        <a class="button" href="https://murf.ai/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Design">
+        <img src="https://logo.clearbit.com/canva.com" alt="logo">
+        <div class="title">Canva (AI features)</div>
+        <div class="desc">Photo editing tool with advanced AI filters and avatars. </div>
+        <div class="price">Pro available</div>
+        <a class="button" href="https://www.canva.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Text-to-Speech">
+        <img src="https://logo.clearbit.com/speechify.com" alt="logo">
+        <div class="title">Speechify</div>
+        <div class="desc">Autocompletes code and suggests functions in real time. </div>
+        <div class="price">Premium</div>
+        <a class="button" href="https://speechify.com/" target="_blank">Visit</a>
+    </div>
+    
+    <div class="card" data-category="Video Generation">
+        <img src="https://logo.clearbit.com/pictory.com" alt="logo">
+        <div class="title">Pictory</div>
+        <div class="desc">ID  Creates talking avatars from still photos; great for pitches.</div>
+        <div class="price">Standard</div>
+        <a class="button" href="https://pictory.ai/" target="_blank">Visit</a>
+    </div>
+    
+</div>
+<script>
+function filterCards() {
+    const selected = document.getElementById("categorySelect").value;
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.style.display = (selected === "all" || card.dataset.category === selected) ? "block" : "none";
+    });
+}
+</script>
 </body>
 </html>
