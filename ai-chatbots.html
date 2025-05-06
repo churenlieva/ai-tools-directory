@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top 10 AI Chatbots</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 AI Chatbot Tools</title>
   <style>
     body {
       background-color: #0d0b1d;
       color: #ffffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 30px;
       margin: 0;
-      padding: 40px;
     }
 
     h1 {
       font-size: 2.5em;
       color: #00fff7;
       text-shadow: 0 0 10px #00fff7;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      text-align: center;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
     }
 
     .tool-card {
@@ -31,27 +32,28 @@
       border: 1px solid #2a2a3d;
       border-radius: 15px;
       padding: 20px;
-      transition: 0.3s ease;
+      transition: 0.3s ease-in-out;
     }
 
     .tool-card:hover {
       background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-5px);
     }
 
-    .tool-title {
-      font-size: 1.4em;
-      color: #52f2ff;
+    .tool-name {
+      font-size: 1.2em;
+      color: #69f6ff;
+      font-weight: bold;
       margin-bottom: 10px;
     }
 
     .tool-desc {
-      color: #ccc;
+      font-size: 0.95em;
+      color: #e0e0e0;
       margin-bottom: 10px;
     }
 
     .tool-link {
-      color: #b47fff;
+      color: #a782f9;
       text-decoration: none;
     }
 
@@ -61,69 +63,58 @@
   </style>
 </head>
 <body>
-  <h1>Top 10 AI Chatbots</h1>
+  <h1>Top 10 AI Chatbot Tools</h1>
   <div class="grid">
-
     <div class="tool-card">
-      <div class="tool-title">ChatGPT</div>
-      <div class="tool-desc">A versatile chatbot by OpenAI that can assist with conversations, creative writing, coding, and more.</div>
-      <a class="tool-link" href="https://chat.openai.com/" target="_blank">Visit ChatGPT</a>
+      <div class="tool-name">ChatGPT</div>
+      <div class="tool-desc">AI assistant from OpenAI used for chatting, answering questions, and coding help.</div>
+      <a class="tool-link" href="#">Visit ChatGPT</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">Gemini</div>
-      <div class="tool-desc">Google’s conversational AI for research, summarizing content, and answering complex questions with context.</div>
-      <a class="tool-link" href="https://gemini.google.com/" target="_blank">Visit Gemini</a>
+      <div class="tool-name">Gemini</div>
+      <div class="tool-desc">Multilingual chatbot by Google that supports creative writing and info searching.</div>
+      <a class="tool-link" href="#">Visit Gemini</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">Llama 3</div>
-      <div class="tool-desc">Meta's latest AI model for natural conversation, with strong performance across multilingual dialogue.</div>
-      <a class="tool-link" href="https://ai.meta.com/llama" target="_blank">Visit LLaMA 3</a>
+      <div class="tool-name">Llama3</div>
+      <div class="tool-desc">Meta’s open-source AI chatbot, great for developers and tinkerers.</div>
+      <a class="tool-link" href="#">Visit Llama3</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">Anthropic Claude</div>
-      <div class="tool-desc">A privacy-focused chatbot built by former OpenAI engineers, excellent for reasoning and summarization.</div>
-      <a class="tool-link" href="https://claude.ai" target="_blank">Visit Claude</a>
+      <div class="tool-name">Anthropic Claude</div>
+      <div class="tool-desc">AI assistant focused on safety and honest answers, used in customer care.</div>
+      <a class="tool-link" href="#">Visit Claude</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">CustomGPT</div>
-      <div class="tool-desc">Create your own chatbot trained on specific documents or knowledge bases for tailored conversations.</div>
-      <a class="tool-link" href="https://customgpt.ai" target="_blank">Visit CustomGPT</a>
+      <div class="tool-name">CustomGPT</div>
+      <div class="tool-desc">Trains your own chatbot using documents and websites, ideal for businesses.</div>
+      <a class="tool-link" href="#">Visit CustomGPT</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">Jasper AI</div>
-      <div class="tool-desc">Primarily a content writing AI with chatbot capabilities to help generate marketing copy, ads, and emails.</div>
-      <a class="tool-link" href="https://www.jasper.ai" target="_blank">Visit Jasper</a>
+      <div class="tool-name">Jasper AI</div>
+      <div class="tool-desc">Content marketing chatbot with AI copywriting features.</div>
+      <a class="tool-link" href="#">Visit Jasper</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">Quickchat AI</div>
-      <div class="tool-desc">Multilingual chatbot for websites that answers product or support questions using your documentation.</div>
-      <a class="tool-link" href="https://www.quickchat.ai" target="_blank">Visit Quickchat AI</a>
+      <div class="tool-name">Quickchat AI</div>
+      <div class="tool-desc">Multilingual AI bot for customer support on websites and apps.</div>
+      <a class="tool-link" href="#">Visit Quickchat</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">BookAldea</div>
-      <div class="tool-desc">AI assistant for writing, editing, and publishing books or long-form content with ease.</div>
-      <a class="tool-link" href="https://bookaldea.com" target="_blank">Visit BookAldea</a>
+      <div class="tool-name">BookAldea</div>
+      <div class="tool-desc">AI-powered writing assistant for authors and book creators.</div>
+      <a class="tool-link" href="#">Visit BookAldea</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">Chatbase</div>
-      <div class="tool-desc">Train a chatbot on your PDF or website and embed it for customer support or sales assistance.</div>
-      <a class="tool-link" href="https://www.chatbase.co" target="_blank">Visit Chatbase</a>
+      <div class="tool-name">Chatbase</div>
+      <div class="tool-desc">Chatbot that answers questions based on your uploaded documents.</div>
+      <a class="tool-link" href="#">Visit Chatbase</a>
     </div>
-
     <div class="tool-card">
-      <div class="tool-title">Lyza</div>
-      <div class="tool-desc">A friendly AI companion designed to engage users in thoughtful conversation and emotional support.</div>
-      <a class="tool-link" href="https://lyza.ai" target="_blank">Visit Lyza</a>
+      <div class="tool-name">Lyza</div>
+      <div class="tool-desc">Friendly AI companion chatbot for daily conversations.</div>
+      <a class="tool-link" href="#">Visit Lyza</a>
     </div>
-
   </div>
 </body>
 </html>
