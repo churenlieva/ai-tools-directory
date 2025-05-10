@@ -1,119 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top 10 AI Chatbot Tools</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 10 AI Meeting Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #0d0b1d;
       color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 30px;
+      font-family: 'Roboto', sans-serif;
+      padding: 20px;
       margin: 0;
     }
-
     h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       color: #00fff7;
       text-shadow: 0 0 10px #00fff7;
-      margin-bottom: 40px;
       text-align: center;
+      margin-bottom: 30px;
     }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
-
     .tool-card {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid #2a2a3d;
-      border-radius: 15px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 15px;
       transition: 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-
     .tool-card:hover {
       background: rgba(255, 255, 255, 0.1);
+      transform: scale(1.03);
     }
-
-    .tool-name {
-      font-size: 1.2em;
-      color: #69f6ff;
-      font-weight: bold;
+    .tool-logo {
+      width: 60px;
+      height: 60px;
       margin-bottom: 10px;
     }
-
+    .tool-name {
+      font-size: 1.1em;
+      color: #69f6ff;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
     .tool-desc {
-      font-size: 0.95em;
+      font-size: 0.9em;
       color: #e0e0e0;
       margin-bottom: 10px;
     }
-
     .tool-link {
       color: #a782f9;
       text-decoration: none;
+      font-weight: bold;
     }
-
     .tool-link:hover {
       text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      .tool-logo {
+        width: 50px;
+        height: 50px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Top 10 AI Chatbot Tools</h1>
+  <h1>Top 10 AI Meeting Tools</h1>
   <div class="grid">
+    <!-- Example tool-card with logo -->
     <div class="tool-card">
-      <div class="tool-name">ChatGPT</div>
-      <div class="tool-desc">AI assistant from OpenAI used for chatting, answering questions, and coding help.</div>
-      <a class="tool-link" href="#">Visit ChatGPT</a>
+      <img class="tool-logo" src="https://logo.clearbit.com/otter.ai" alt="Otter.ai">
+      <div class="tool-name">Otter.ai</div>
+      <div class="tool-desc">Live transcription and meeting notes.</div>
+      <a class="tool-link" href="#" target="_blank">Visit Otter.ai</a>
     </div>
-    <div class="tool-card">
-      <div class="tool-name">Gemini</div>
-      <div class="tool-desc">Multilingual chatbot by Google that supports creative writing and info searching.</div>
-      <a class="tool-link" href="#">Visit Gemini</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">Llama3</div>
-      <div class="tool-desc">Meta’s open-source AI chatbot, great for developers and tinkerers.</div>
-      <a class="tool-link" href="#">Visit Llama3</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">Anthropic Claude</div>
-      <div class="tool-desc">AI assistant focused on safety and honest answers, used in customer care.</div>
-      <a class="tool-link" href="#">Visit Claude</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">CustomGPT</div>
-      <div class="tool-desc">Trains your own chatbot using documents and websites, ideal for businesses.</div>
-      <a class="tool-link" href="#">Visit CustomGPT</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">Jasper AI</div>
-      <div class="tool-desc">Content marketing chatbot with AI copywriting features.</div>
-      <a class="tool-link" href="#">Visit Jasper</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">Quickchat AI</div>
-      <div class="tool-desc">Multilingual AI bot for customer support on websites and apps.</div>
-      <a class="tool-link" href="#">Visit Quickchat</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">BookAldea</div>
-      <div class="tool-desc">AI-powered writing assistant for authors and book creators.</div>
-      <a class="tool-link" href="#">Visit BookAldea</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">Chatbase</div>
-      <div class="tool-desc">Chatbot that answers questions based on your uploaded documents.</div>
-      <a class="tool-link" href="#">Visit Chatbase</a>
-    </div>
-    <div class="tool-card">
-      <div class="tool-name">Lyza</div>
-      <div class="tool-desc">Friendly AI companion chatbot for daily conversations.</div>
-      <a class="tool-link" href="#">Visit Lyza</a>
+
+    <!-- Repeat this structure for all other tools, updating logo URLs accordingly -->
+  </div>
+</body>
+</html>
+
     </div>
   </div>
 </body>
